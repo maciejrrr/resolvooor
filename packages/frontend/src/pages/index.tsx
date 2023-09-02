@@ -4,6 +4,8 @@ import { CenterBody } from '@components/layout/CenterBody'
 import { ChainInfo } from '@components/web3/ChainInfo'
 import { ConnectButton } from '@components/web3/ConnectButton'
 import { GreeterContractInteractions } from '@components/web3/GreeterContractInteractions'
+import { DomainToAddressResolver } from '@components/web3/DomainToAddressResolver'
+import { AddressToDomainResolver } from '@components/web3/AddressToDomainResolver'
 import { useInkathon } from '@scio-labs/use-inkathon'
 import type { NextPage } from 'next'
 import { useEffect } from 'react'
@@ -29,6 +31,11 @@ const HomePage: NextPage = () => {
 
         {/* Connect Wallet Button */}
         <ConnectButton />
+
+        <div tw="mt-10 flex flex-row gap-4">
+          <DomainToAddressResolver />
+          <AddressToDomainResolver />
+        </div>
 
         <div tw="mt-10 flex w-full flex-wrap items-start justify-center gap-4">
           {/* Chain Metadata Information */}
