@@ -47,7 +47,7 @@ export const DomainToAddressResolver: FC = () => {
           <FormControl>
             <FormLabel>Address</FormLabel>
             <Input
-              placeholder={updateIsLoading ? 'Loading…' : greeterMessage}
+              placeholder={updateIsLoading ? 'Loading…' : 'Address'}
               value={greeterMessage}
               disabled={true}
             />
