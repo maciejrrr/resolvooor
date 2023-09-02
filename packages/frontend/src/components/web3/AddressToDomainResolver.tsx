@@ -57,7 +57,7 @@ export const AddressToDomainResolver: FC = () => {
         {/* Update Greeting */}
         {!!isConnected && (
           <Card variant="outline" p={4} bgColor="whiteAlpha.100">
-            <form>
+            <form onSubmit={form.handleSubmit(updateGreeting)}>
               <Stack direction="row" spacing={2} align="end">
                 <FormControl>
                   <FormLabel>Address</FormLabel>
@@ -69,7 +69,6 @@ export const AddressToDomainResolver: FC = () => {
                   isLoading={updateIsLoading}
                   disabled={updateIsLoading}
                   type="submit"
-                  onClick={updateGreeting}
                 >
                   Submit
                 </Button>
